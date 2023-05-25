@@ -1,0 +1,15 @@
+.background {
+    background-color: rgba(242,234,221,255);
+
+}
+@font-face {
+    font-family: 'EngrvrsOldEng BT';
+    src: url('EngraversOldEnglishBT-Regular.woff2') format('woff2'),
+        url('EngraversOldEnglishBT-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+.font {
+    font-family: 'EngrvrsOldEng BT'; font-weight: normal; font-style: normal;;
+}
