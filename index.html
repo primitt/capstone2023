@@ -56,7 +56,7 @@
         font-family: 'Times New Roman', Times, serif
     }
 </style>
-
+<!-- Hi traveler! What are you doing around these parts?  -->
 <body>
     <section class="">
         <div class="background min-h-screen">
@@ -157,6 +157,11 @@
             </div>
         </div>
     </section>
+    <div class="toast hidden" id="easteregg">
+        <div class="alert alert-info">
+          <span>Oh? What's that sound?<br> The scroll bar is smaller...<br>I wonder why...</span>
+        </div>
+      </div>
 </body>
 <footer class="background hidden" id="creator">
     <div class="flex flex-row justify-center nfont text-sm">
@@ -173,9 +178,23 @@
 
 </html>
 <script>
+    var current_status = false;
+    var audio = new Audio('click.mp3');
     function toggler() {
+        audio.play();
         document.getElementById("creator").classList.toggle("hidden");
+        if (current_status == false){
+            current_status = true;
+            document.getElementById("easteregg").classList.toggle("hidden");
+            setTimeout(() => {
+                document.getElementById("easteregg").classList.toggle("hidden");
+            }, 3000)
+        }
+        else{
+            current_status = false; 
+        }
     }
+    
 </script>
 <script>
     tailwind.config = {
